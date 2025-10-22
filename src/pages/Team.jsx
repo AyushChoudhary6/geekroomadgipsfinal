@@ -112,7 +112,7 @@ const Team = () => {
     },
     {
       id: 8,
-      name: 'Aryan Srivastava',
+      name: 'Aryan Shrivastava',
       role: 'Event Lead',
       image: '/photos/aryan1.jpg',
       bio: 'Creating memorable tech experiences',
