@@ -318,9 +318,9 @@ const Team = () => {
         <h1 className="text-5xl font-bold ">Meet Our Team</h1>
       </motion.div>
 
-      {/* Team Navigation */}
+      {/* Team Navigation - Desktop View */}
       <motion.div
-        className="team-navigation-container flex justify-center mb-16 pt-8"
+        className="team-navigation-container hidden md:flex justify-center mb-16 pt-8"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -363,6 +363,60 @@ const Team = () => {
             </span>
           </motion.button>
         </div>
+      </motion.div>
+
+      {/* Team Navigation - Mobile View */}
+      <motion.div
+        className="team-navigation-mobile md:hidden flex flex-col gap-4 px-4 mb-16 pt-8"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <motion.button
+          variants={navButtonVariants}
+          initial="initial"
+          whileHover="hover"
+          whileTap="tap"
+          className={`team-nav-btn-mobile flex items-center justify-center w-full px-6 py-4 rounded-2xl transition-all duration-300 ${
+            activeSection === 'council-members'
+              ? 'bg-green-500 text-black font-bold shadow-lg shadow-green-500/40'
+              : 'bg-gray-800/50 border border-green-500/30 text-white'
+          }`}
+          onClick={() => scrollToSection('council-members')}
+        >
+          <span className="nav-icon text-2xl mr-3">👑</span>
+          <span className="nav-text text-lg font-semibold">Council Members</span>
+          <span className={`nav-count ml-3 px-3 py-1 rounded-full text-sm font-bold ${
+            activeSection === 'council-members' 
+              ? 'bg-black/30 text-black' 
+              : 'bg-green-500/20 text-green-400'
+          }`}>
+            {councilMembers.length}
+          </span>
+        </motion.button>
+        
+        <motion.button
+          variants={navButtonVariants}
+          initial="initial"
+          whileHover="hover"
+          whileTap="tap"
+          className={`team-nav-btn-mobile flex items-center justify-center w-full px-6 py-4 rounded-2xl transition-all duration-300 ${
+            activeSection === 'core-team'
+              ? 'bg-green-500 text-black font-bold shadow-lg shadow-green-500/40'
+              : 'bg-gray-800/50 border border-green-500/30 text-white'
+          }`}
+          onClick={() => scrollToSection('core-team')}
+        >
+          <span className="nav-icon text-2xl mr-3">⚡</span>
+          <span className="nav-text text-lg font-semibold">Core Team</span>
+          <span className={`nav-count ml-3 px-3 py-1 rounded-full text-sm font-bold ${
+            activeSection === 'core-team' 
+              ? 'bg-black/30 text-black' 
+              : 'bg-green-500/20 text-green-400'
+          }`}>
+            {coreTeam.length}
+          </span>
+        </motion.button>
       </motion.div>
 
       {/* Council Members Section */}

@@ -107,9 +107,9 @@ const Events = () => {
         <p className="text-xl text-gray-300">Innovate. Collaborate. Elevate.</p>
       </motion.div>
 
-      {/* Events Navigation */}
+      {/* Events Navigation - Desktop View */}
       <motion.div
-        className="events-navigation-container flex justify-center mb-16 pt-8"
+        className="events-navigation-container hidden md:flex justify-center mb-16 pt-8"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
@@ -152,6 +152,60 @@ const Events = () => {
             </span>
           </motion.button>
         </div>
+      </motion.div>
+
+      {/* Events Navigation - Mobile View */}
+      <motion.div
+        className="events-navigation-mobile md:hidden flex flex-col gap-4 px-4 mb-16 pt-8"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <motion.button
+          variants={navButtonVariants}
+          initial="initial"
+          whileHover="hover"
+          whileTap="tap"
+          className={`events-nav-btn-mobile flex items-center justify-center w-full px-6 py-4 rounded-2xl transition-all duration-300 ${
+            activeSection === 'upcoming-events'
+              ? 'bg-green-500 text-black font-bold shadow-lg shadow-green-500/40'
+              : 'bg-gray-800/50 border border-green-500/30 text-white'
+          }`}
+          onClick={() => scrollToSection('upcoming-events')}
+        >
+          <span className="nav-icon text-2xl mr-3">📅</span>
+          <span className="nav-text text-lg font-semibold">Upcoming</span>
+          <span className={`nav-count ml-3 px-3 py-1 rounded-full text-sm font-bold ${
+            activeSection === 'upcoming-events' 
+              ? 'bg-black/30 text-black' 
+              : 'bg-green-500/20 text-green-400'
+          }`}>
+            {upcomingEvents.length}
+          </span>
+        </motion.button>
+        
+        <motion.button
+          variants={navButtonVariants}
+          initial="initial"
+          whileHover="hover"
+          whileTap="tap"
+          className={`events-nav-btn-mobile flex items-center justify-center w-full px-6 py-4 rounded-2xl transition-all duration-300 ${
+            activeSection === 'past-events'
+              ? 'bg-green-500 text-black font-bold shadow-lg shadow-green-500/40'
+              : 'bg-gray-800/50 border border-green-500/30 text-white'
+          }`}
+          onClick={() => scrollToSection('past-events')}
+        >
+          <span className="nav-icon text-2xl mr-3">📚</span>
+          <span className="nav-text text-lg font-semibold">Past</span>
+          <span className={`nav-count ml-3 px-3 py-1 rounded-full text-sm font-bold ${
+            activeSection === 'past-events' 
+              ? 'bg-black/30 text-black' 
+              : 'bg-green-500/20 text-green-400'
+          }`}>
+            {pastEvents.length}
+          </span>
+        </motion.button>
       </motion.div>
 
       {/* Upcoming Events Section */}
