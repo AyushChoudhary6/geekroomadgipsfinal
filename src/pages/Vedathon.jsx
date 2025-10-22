@@ -109,7 +109,8 @@ const Vedathon = () => {
   return (
     <div className="vedathon-page min-h-screen bg-gradient-to-br from-gray-900 to-black text-white pt-20">
       {/* Hero Banner with Large Image */}
-      <section className="vedathon-banner relative h-[70vh] min-h-[400px] md:min-h-[500px] overflow-hidden">
+      {/* Desktop: Full-width banner */}
+      <section className="vedathon-banner hidden md:block relative h-[70vh] min-h-[500px] overflow-hidden">
         <motion.img
           src={vd}
           alt="Vedathon Banner"
@@ -127,6 +128,28 @@ const Vedathon = () => {
           >
           </motion.div>
         </div>
+      </section>
+
+      {/* Mobile: Card format */}
+      <section className="vedathon-banner-mobile md:hidden py-8 px-4">
+        <motion.div
+          className="max-w-md mx-auto bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-700"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="relative h-64 overflow-hidden">
+            <motion.img
+              src={vd}
+              alt="Vedathon Banner"
+              className="w-full h-full object-cover object-center"
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.5 }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Hero Section Below Image */}
