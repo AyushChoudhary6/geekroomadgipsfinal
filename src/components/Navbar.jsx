@@ -47,6 +47,11 @@ function Navbar() {
             Events
           </NavLink>
         </li>
+         <li className="nav-item">
+          <NavLink to="/vedathon" className="nav-link" onClick={closeMenu}>
+            Vedathon
+          </NavLink>
+        </li>
         <li className="nav-item">
           <NavLink to="/team" className="nav-link" onClick={closeMenu}>
             Team

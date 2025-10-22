@@ -12,7 +12,7 @@ import CodeVeda from './pages/CodeVeda.jsx';
 import GalleryPage from './pages/GalleryPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import Team from './pages/Team.jsx';
-
+// import Vedathon from './pages/Vedathon.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +39,11 @@ const router = createBrowserRouter([
         path: "events/vedathon",
         element: <Vedathon />
       },
+       {
+        path: "vedathon",
+        element: <Vedathon />
+      },
+      
       {
         path: "events/codeveda",
         element: <CodeVeda />
