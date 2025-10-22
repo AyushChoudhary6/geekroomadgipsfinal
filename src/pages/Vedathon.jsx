@@ -227,7 +227,7 @@ const Vedathon = () => {
             {/* CTA Button */}
             <motion.div variants={itemVariants} className="hero-actions flex gap-8 justify-center mt-12">
               <motion.a 
-                href="https://vision.hack2skill.com/event/vedathon/?utm_source=Refferal&utm_medium=Ayush" 
+                href="https://vision.hack2skill.com/event/vedathon/?utm_source=Refferal&utm_medium=Riya" 
                 className="bg-green-500 hover:bg-green-400 text-black font-bold text-lg px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/40"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
