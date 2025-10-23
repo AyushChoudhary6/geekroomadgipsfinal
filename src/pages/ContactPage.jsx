@@ -73,7 +73,7 @@ function ContactPage() {
             </div>
           </div>
 
-          <a href="https://discord.gg/GCfgFzAGa" className="contact-card-link">
+          <a href="https://discord.gg/GCfgFzAGa" className="contact-card-link" target="_blank" rel="noopener noreferrer">
             <div className="contact-card">
               <FaDiscord className="card-icon" />
               <div className="card-content">
