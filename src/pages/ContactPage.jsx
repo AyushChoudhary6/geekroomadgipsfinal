@@ -101,6 +101,7 @@ function ContactPage() {
             <div className="card-content">
               <h3>Visit Us</h3>
               <p>Dr. Akhilesh Das Gupta Institute of Professional Studies</p>
+              <p> FC-26, Shastri Park, New Delhi-110053, India</p>
             </div>
           </div>
           

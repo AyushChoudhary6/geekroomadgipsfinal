@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Team = () => {
   const [activeSection, setActiveSection] = useState('council-members');
@@ -486,14 +487,16 @@ const Team = () => {
             <p className="text-xl text-gray-300 mb-8">
               We're always looking for passionate individuals to join our community
             </p>
-            <motion.button
-              className="bg-green-500 text-black px-8 py-4 rounded-full font-bold text-lg relative overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-              <span className="relative">Get In Touch</span>
-            </motion.button>
+            <Link to="/contact">
+              <motion.button
+                className="bg-green-500 text-black px-8 py-4 rounded-full font-bold text-lg relative overflow-hidden group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                <span className="relative">Get In Touch</span>
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>

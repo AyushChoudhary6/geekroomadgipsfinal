@@ -430,7 +430,7 @@ const Events = () => {
               {
                 title: 'Bring Your ID',
                 content:
-                  'Valid student or professional ID required for entry. Screenshots of registration confirmations accepted.',
+                  'Valid student or professional ID required for entry.',
                 icon: (
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 mb-4" viewBox="0 0 24 24" fill="url(#grad2)">
                     <defs>
