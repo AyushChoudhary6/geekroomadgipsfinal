@@ -17,7 +17,7 @@ const Events = () => {
       id: 1,
       title: 'Vedathon',
       category: 'Ideathon',
-      date: '1 November',
+      date: '1 November 2025',
       time: 'Timings: Revealing Soon',
       location: 'OPS Tree Global Noida',
       prize: 'Prize: Revealing Soon',
@@ -34,7 +34,7 @@ const Events = () => {
       category: 'Hackathon',
       date: '13 September 2025',
       description:
-        '8-hour coding marathon with 150+ participants building innovative solutions for real-world problems.',
+        '8-hour coding marathon with 2000+ participants building innovative solutions for real-world problems.',
       stats: {
         participants: '2000+',
         projects: '500+',
