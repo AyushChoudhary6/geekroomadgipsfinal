@@ -5,7 +5,7 @@ import "./GalleryPage.css";
 
 const images = [
   '1', '3', '5', '6', '7',
-  '8', '9', '10', '12', '13', '14','twelve'
+  '8', '9', '10', '12', '13', '14', '20'
 ];
 
 const slides = images.map(name => ({
@@ -13,7 +13,7 @@ const slides = images.map(name => ({
 }));
 
 const thumbnails = images.map(name => ({
-  src: `/${name}.webp`,
+  src: name === '20' ? `/${name}.jpg` : `/${name}.webp`,
   alt: `Gallery image ${name}`
 }));
 
