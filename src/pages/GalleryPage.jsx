@@ -5,7 +5,7 @@ import "./GalleryPage.css";
 
 const images = [
   '1', '3', '5', '6', '7',
-  '8', '9', '10', '12', '13', '14'
+  '8', '9', '10', '12', '13', '14','twelve'
 ];
 
 const slides = images.map(name => ({

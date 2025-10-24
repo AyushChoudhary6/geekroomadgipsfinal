@@ -13,7 +13,7 @@ import {
 const faqData = [
   {
     question: "How does the society help in improving technical skills?",
-    answer: "A tech society helps you learn new technologies through fun workshops and hands-on projects. You get to work in teams, solve challenges, and improve your problem-solving skills. Seniors and mentors guide you along the way, making learning easier and more enjoyable."
+    answer: "Our society Geek Room helps you learn new technologies through fun workshops and hands-on projects. You get to work in teams, solve challenges, and improve your problem-solving skills. Seniors and mentors guide you along the way, making learning easier and more enjoyable."
   },
   {
     question: "What exactly does this tech society do?",
