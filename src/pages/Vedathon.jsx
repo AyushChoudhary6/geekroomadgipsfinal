@@ -263,7 +263,7 @@ const Vedathon = () => {
               {
                 title: "Registration Closes",
                 subtitle: "Last day to register",
-                date: "October 27- 111:59",
+                date: "October 27- 11:59pm",
                 description: "Make sure you don't miss out on this amazing opportunity."
               }
             ].map((item, index) => (
